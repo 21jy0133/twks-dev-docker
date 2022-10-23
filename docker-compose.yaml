@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:14.2
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: twks
+      POSTGRES_USER: twks_db_user
+      POSTGRES_PASSWORD: twks_db_pw
+
+volumes:
+  pgdata:
+
